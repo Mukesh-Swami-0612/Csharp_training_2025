@@ -1,3 +1,6 @@
+
+Height Category: Accept height in cm. If < 150 (Dwarf), 150-165 (Average), 165-190 (Tall), >190 (Abnormal)
+
 // Import System namespace to use Console and other basic classes
 using System;
 
