@@ -33,7 +33,7 @@ namespace Visitor
     }
 
     // Program class - execution starts from Main method
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
