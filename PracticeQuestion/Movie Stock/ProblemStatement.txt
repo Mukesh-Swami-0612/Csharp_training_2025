@@ -1,0 +1,30 @@
+Functionalities:
+
+In class Movie, implement the below-given properties.
+
+Datatype	Properties
+string	Title
+string	Artist
+string	Genre
+int	    Ratings
+
+In class Program, implement the below-given method.
+public static List<Movie> MovieList - In the code template, it is already provided.
+Implement the features listed below.
+
+Method	Description
+public void AddMovie(string MovieDetails)	This method is used to add the Movie details to the MovieList.
+This method should accept the details passed as a string separated by a comma and convert it into a Movie object and each Movie object should be stored in a MovieList.
+public List<Movie> ViewMoviesByGenre(string genre)	This method is used to find the Movie details based on the genre passed as an argument.
+
+If the Movies are available for that genre in the MovieList then store the Movie details as List of Movie and return it.
+
+If the Movies are not available for that genre in the MovieList, then return an empty List and print "No Movies found in genre '{genre}'" in the Main method.
+public List<Movie> ViewMoviesByRatings()	This method sorts the Movies based on their ratings in ascending order and returns the List.
+In Program class, the Main method,
+
+Get the values from the user.
+
+Call the methods accordingly and display the result.
+
+In the Sample Input / Output provided, the highlighted text in bold corresponds to the input given by the user and the remaining text represents the output.
