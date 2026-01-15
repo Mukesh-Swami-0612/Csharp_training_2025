@@ -1,0 +1,22 @@
+Functionalities:
+
+In the class EstimateDetails, implement the below given public properties.
+
+Class	Property Name
+EstimateDetails	float Construction Area
+EstimateDetails	float SiteArea
+
+In the class Program, implement the below-given method.
+
+Method	Description
+public EstimateDetails ValidateConstructionEstimate(float Construction Area, float siteArea)	This method should check whether the Construction area is less than or equal to the site area. If the Construction area is lesser than the site area then copy the Construction Area and siteArea to the EstimateDetails object.
+If the Construction area is greater than the site area then throw a user-defined exception called Construction EstimateException with the message "Sorry your Construction Estimate is not approved".
+Note:
+
+The Exception object itself should display this message. To do this, A class Construction EstimateException inherits an Exception class.
+
+If the Construction approval does not meet the requirement, this method should throw a user-defined exception "Construction EstimateException".
+
+From the main method invoke the ValidateConstruction Estimate method to handle the exception and print the appropriate message.
+
+Output is Case-sensitive.
