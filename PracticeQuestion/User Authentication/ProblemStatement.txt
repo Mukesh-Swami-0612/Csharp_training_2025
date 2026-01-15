@@ -1,0 +1,29 @@
+Functionalities :
+
+In the class User, implement the below given public properties.
+
+Class	Property Name
+User	String Name
+User	String Password
+User	String ConfirmationPassword
+
+In the class Program, implement the below-given method.
+
+Method	Description
+public User ValidatePassword(String name, String password, String confirmationPassword)	This method should get the User details, create the User object using those details, and return that object.
+If the password and confirm password are different then throw a user-defined exception as "PasswordMismatchException" with the message "Password entered does not match".
+Note:
+
+If the password matches (case-sensitive) exactly with confirmPassword this method should return User Object.
+
+If the password does not match (case-sensitive) with confirmPassword this method should throw a "PasswordMismatchException".
+
+The Exception object itself should display this message.
+
+To do this, a class PasswordMismatchException inherits the Exception class.
+
+In the Program class, write the Main method and test the method ValidatePassword.
+
+If it returns a valid User object, then display "Registered Successfully".
+
+Use a catch block to handle the exception that is returned by the method PasswordMismatchException. In the catch block display the Exception message.
