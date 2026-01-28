@@ -1,0 +1,99 @@
+using System;
+
+class WordWand
+{
+    static bool IsValidSentence(string sentence)
+    {
+        for (int i = 0; i < sentence.Length; i++)
+        {
+            char ch = sentence[i];
+            if (!((ch >= 'A' && ch <= 'Z') ||
+                  (ch >= 'a' && ch <= 'z') ||
+                   ch == ' '))
+                return false;
+        }
+        return true;
+    }
+
+    static int CountWords(string sentence)
+    {
+        int count = 0;
+        bool inWord = false;
+
+        for (int i = 0; i < sentence.Length; i++)
+        {
+            if (sentence[i] != ' ' && !inWord)
+            {
+                count++;
+                inWord = true;
+            }
+            else if (sentence[i] == ' ')
+            {
+                inWord = false;
+            }
+        }
+        return count;
+    }
+
+    static void ReverseLetters(string sentence)
+    {
+        int start = 0;
+
+        for (int i = 0; i <= sentence.Length; i++)
+        {
+            if (i == sentence.Length || sentence[i] == ' ')
+            {
+                // reverse characters from start to i-1
+                for (int j = i - 1; j >= start; j--)
+                {
+                    Console.Write(sentence[j]);
+                }
+
+                if (i < sentence.Length)
+                    Console.Write(" ");
+
+                start = i + 1;
+            }
+        }
+        Console.WriteLine();
+    }
+
+    static void ReverseWords(string sentence)
+    {
+        int end = sentence.Length - 1;
+
+        for (int i = sentence.Length - 1; i >= 0; i--)
+        {
+            if (i == 0 || sentence[i - 1] == ' ')
+            {
+                for (int j = i; j <= end; j++)
+                {
+                    Console.Write(sentence[j]);
+                }
+                Console.Write(" ");
+                end = i - 2;
+            }
+        }
+        Console.WriteLine();
+    }
+
+    public static void Main()
+    {
+        Console.WriteLine("Enter the sentence:");
+        string sentence = Console.ReadLine();
+
+        if (!IsValidSentence(sentence))
+        {
+            Console.WriteLine("Invalid Sentence");
+            return;
+        }
+
+        int wordCount = CountWords(sentence);
+        Console.WriteLine("Word Count: " + wordCount);
+
+        if (wordCount % 2 == 0)
+            ReverseWords(sentence);
+        else
+            ReverseLetters(sentence);
+    }
+}
