@@ -1,6 +1,4 @@
 using System;
-
-// Custom Exception Class
 public class RobotSafetyException : Exception
 {
     public RobotSafetyException(string message) : base(message)
